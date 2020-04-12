@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <job>
   <name>JobFacts</name>
   <description/>
@@ -8,7 +7,7 @@
   <created_user>-</created_user>
   <created_date>2020/03/16 20:59:43.552</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2020/03/16 21:01:02.471</modified_date>
+  <modified_date>2020/04/11 19:38:32.255</modified_date>
   <parameters>
     </parameters>
   <slaveservers>
@@ -290,7 +289,6 @@
       <name>Start</name>
       <description/>
       <type>SPECIAL</type>
-      <attributes/>
       <start>Y</start>
       <dummy>N</dummy>
       <repeat>N</repeat>
@@ -306,17 +304,16 @@
       <nr>0</nr>
       <xloc>9</xloc>
       <yloc>201</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>TransfFatOrdesReview</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
+      <specification_method>rep_name</specification_method>
       <trans_object_id/>
-      <filename>C:/Analytics/Facts/FatOrdesReview.ktr</filename>
-      <transname/>
+      <filename/>
+      <transname>FatOrdesReview</transname>
+      <directory>/Facts</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -344,17 +341,16 @@
       <nr>0</nr>
       <xloc>617</xloc>
       <yloc>89</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>TransfFatOrdersPayments</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
+      <specification_method>rep_name</specification_method>
       <trans_object_id/>
-      <filename>C:/Analytics/Facts/FatOrdersPayments.ktr</filename>
-      <transname/>
+      <filename/>
+      <transname>FatOrdersPayments</transname>
+      <directory>/Facts</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -382,17 +378,16 @@
       <nr>0</nr>
       <xloc>473</xloc>
       <yloc>89</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>TransfFatOrdersItens</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
+      <specification_method>rep_name</specification_method>
       <trans_object_id/>
-      <filename>C:/AnalyticsFacts/FatOrdersItens.ktr</filename>
-      <transname/>
+      <filename/>
+      <transname>FatOrdersItens</transname>
+      <directory>/Facts</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -420,17 +415,16 @@
       <nr>0</nr>
       <xloc>329</xloc>
       <yloc>89</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>TransfFatOrders</name>
       <description/>
       <type>TRANS</type>
-      <attributes/>
-      <specification_method>filename</specification_method>
+      <specification_method>rep_name</specification_method>
       <trans_object_id/>
-      <filename>C:/Analytics/Facts/FatOrders.ktr</filename>
-      <transname/>
+      <filename/>
+      <transname>FatOrders</transname>
+      <directory>/Facts</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -458,32 +452,27 @@
       <nr>0</nr>
       <xloc>185</xloc>
       <yloc>89</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>Abort job</name>
       <description/>
       <type>ABORT</type>
-      <attributes/>
       <message/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>409</xloc>
       <yloc>329</yloc>
-      <attributes_kjc/>
     </entry>
     <entry>
       <name>Success</name>
       <description/>
       <type>SUCCESS</type>
-      <attributes/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>825</xloc>
       <yloc>89</yloc>
-      <attributes_kjc/>
     </entry>
   </entries>
   <hops>
@@ -530,7 +519,7 @@
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>TransfFatOrders</from>
@@ -571,5 +560,20 @@
   </hops>
   <notepads>
   </notepads>
-  <attributes/>
+  <attributes>
+    <group>
+      <name>METASTORE.pentaho</name>
+      <attribute>
+        <key>Default Run Configuration</key>
+        <value>{"namespace":"pentaho","id":"Default Run Configuration","name":"Default Run Configuration","description":"Defines a default run configuration","metaStoreName":null}</value>
+      </attribute>
+    </group>
+    <group>
+      <name>{"_":"Embedded MetaStore Elements","namespace":"pentaho","type":"Default Run Configuration"}</name>
+      <attribute>
+        <key>Pentaho local</key>
+        <value>{"children":[{"children":[],"id":"server","value":null},{"children":[],"id":"clustered","value":"N"},{"children":[],"id":"name","value":"Pentaho local"},{"children":[],"id":"description","value":null},{"children":[],"id":"pentaho","value":"N"},{"children":[],"id":"readOnly","value":"Y"},{"children":[],"id":"sendResources","value":"N"},{"children":[],"id":"logRemoteExecutionLocally","value":"N"},{"children":[],"id":"remote","value":"N"},{"children":[],"id":"local","value":"Y"},{"children":[],"id":"showTransformations","value":"N"}],"id":"Pentaho local","value":null,"name":"Pentaho local","owner":null,"ownerPermissionsList":[]}</value>
+      </attribute>
+    </group>
+  </attributes>
 </job>
