@@ -18,5 +18,15 @@ A carga de dados foi realizada em um banco de dados PostgreSql, onde foi montado
 
 ![dm](https://github.com/levisouuza/Brazilian-E-commerce-Project/blob/master/postgresBrazilianEcommerce.png)
 
+## 4.Dashboard
+
+Para apresentação dos dados, foi escolhido o Microsoft Power BI como ferramenta. No *PBI* é possível verificar como está o relacionamento entre as tabelas fato e dimensão, confome figura abaixo:
+
+![relationship](https://github.com/levisouuza/Brazilian-E-commerce-Project/blob/master/RelationshipView.PNG)
+
+Por fim, apresento o dashboard criado.
+
+![dashboard](https://github.com/levisouuza/Brazilian-E-commerce-Project/blob/master/DashBrazilianEcommerce.png)
+
 
 
